@@ -32,7 +32,7 @@ class ContatoController {
 
             if ($this->contato->salvarContato($nome, $email, $telefone, $mensagem)) {
                 $enviado = $this->enviarEmail($nome, $email, $telefone, $mensagem);
-                $msg = "";
+                $msg = "Contato enviado com sucesso!";
             } else {
                 $msg = "Erro ao enviar contato!";
             }
